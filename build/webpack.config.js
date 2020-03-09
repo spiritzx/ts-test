@@ -3,7 +3,7 @@
  * @Author: tom-z(spirit108@foxmail.com)
  * @Date: 2020-03-08 14:40:40
  * @LastEditors: tom-z(spirit108@foxmail.com)
- * @LastEditTime: 2020-03-08 15:21:08
+ * @LastEditTime: 2020-03-09 10:53:16
  */
 
 const htmlPlugin = require("html-webpack-plugin");
@@ -12,18 +12,15 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 module.exports = {
   entry: "./src/index.ts",
   output: {
-    filename: "main.js"
+    filename: "[name].js"
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js"]
   },
   module: {
     rules: [
-      {
-        test: "/\.tst?$/",
-        use: "ts-loader",
-        exclude: "/node_modules"
-      }
+      // all files with a `.ts` or `.tsx` extension will be handled by `ts-loader`
+      { test: /\.tsx?$/, loader: "ts-loader" }
     ]
   },
   devtool: process.env.NODE_ENV === "production" ? false : "inline-source-map",
