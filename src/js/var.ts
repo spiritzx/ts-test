@@ -3,7 +3,7 @@
  * @Author: tom-z(spirit108@foxmail.com)
  * @Date: 2020-03-09 09:43:47
  * @LastEditors: tom-z(spirit108@foxmail.com)
- * @LastEditTime: 2020-03-09 19:55:31
+ * @LastEditTime: 2020-03-09 21:00:16
  */
 console.log("基本类型")
 // 字符串
@@ -14,10 +14,11 @@ let num:number = 55;
 let flag:boolean = true;
 // undefined
 let und:undefined = undefined;
+let und1:void = undefined;
 // null
 let nu:null = null;
 // symbol
-let sym:symbol = Symbol(55)
+let sym:symbol = Symbol(55);
 console.log("1: " + str);
 console.log("2: " + num);
 console.log("3: " + flag);
