@@ -1,9 +1,9 @@
 /*
- * @Descripttion: 基本类型
+ * @Descripttion: 数据类型
  * @Author: tom-z(spirit108@foxmail.com)
  * @Date: 2020-03-09 09:43:47
  * @LastEditors: tom-z(spirit108@foxmail.com)
- * @LastEditTime: 2020-03-09 15:23:21
+ * @LastEditTime: 2020-03-09 19:55:31
  */
 console.log("基本类型")
 // 字符串
@@ -55,7 +55,21 @@ let arrAny:Array<any>=[function(){}, {}, [], /\555/];
 
 
 console.log("函数")
-let fn1 = ():string => {
-  console.log(4)
-  return "52";
+let fn1 = (a:number = 1, b:number = 2):string => {
+  console.log(a + b);
+  return "" + a + b;
 }
+fn1(5, 6);
+
+let fn2 = (...arg:Array<number>) => {
+  console.log(arg[0]);
+}
+fn2(1, 2);
+
+console.log("正则")
+let reg:RegExp = /test/g;
+let reg1:RegExp = new RegExp("test");
+console.log(reg);
+console.log(reg1);
+
+
