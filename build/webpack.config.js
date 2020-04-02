@@ -3,7 +3,7 @@
  * @Author: tom-z(spirit108@foxmail.com)
  * @Date: 2020-03-08 14:40:40
  * @LastEditors: tom-z(spirit108@foxmail.com)
- * @LastEditTime: 2020-03-09 10:53:16
+ * @LastEditTime: 2020-04-02 22:50:25
  */
 
 const htmlPlugin = require("html-webpack-plugin");
@@ -11,9 +11,9 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.ts",
-  output: {
-    filename: "[name].js"
-  },
+  // output: {
+  //   filename: "[name].js"
+  // },
   resolve: {
     extensions: [".ts", ".tsx", ".js"]
   },
