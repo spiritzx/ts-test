@@ -3,7 +3,7 @@
  * @Author: tom-z(spirit108@foxmail.com)
  * @Date: 2020-03-18 21:51:52
  * @LastEditors: tom-z(spirit108@foxmail.com)
- * @LastEditTime: 2020-04-04 13:29:19
+ * @LastEditTime: 2020-04-04 14:26:55
  */
 
 class Parent1 {
@@ -60,12 +60,13 @@ newChild2.prif("dd")
 function createObj<T>(c:new(name:string) => T, name:string):T {
   return new c(name)
 }
- let obj10 = createObj(Child1, "44")
+ let obj10:Child1 = createObj<Child1>(Child1, "44")
  obj10.show()
 
 interface classObj {
   name:string
   age:number
+  say:Function
 }
 
 class Parent3 implements classObj {
@@ -74,8 +75,11 @@ class Parent3 implements classObj {
   constructor(name:string) {
     this.name = name
   }
-  say() {
+  public say() {
     console.log(this.name)
+  }
+  static con() {
+    return 1
   }
 }
 
