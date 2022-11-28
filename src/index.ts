@@ -1,13 +1,13 @@
 /*
  * @Descripttion: 
  * @Author: tom-z(spirit108@foxmail.com)
- * @Date: 2020-03-09 09:35:31
+ * @Date: 2022-11-28 21:38:46
  * @LastEditors: tom-z(spirit108@foxmail.com)
- * @LastEditTime: 2020-04-05 16:38:59
+ * @LastEditTime: 2022-11-28 22:15:30
  */
-// require("./js/var")
-// require("./js/interface")
-// require("./js/t")
-// require("./js/class")
-// require("./js/enum")
-require("./js/desc")
+
+import "./ts/fn";
+
+console.log("基本类型")
+// 字符串
+let str4:string = "text";
