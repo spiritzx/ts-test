@@ -3,8 +3,16 @@
  * @Author: tom-z(spirit108@foxmail.com)
  * @Date: 2020-04-05 16:37:51
  * @LastEditors: tom-z(spirit108@foxmail.com)
- * @LastEditTime: 2020-04-05 22:30:43
+ * @LastEditTime: 2022-12-05 19:00:02
  */
+
+interface IParentDesc {
+  a: string
+  age?:number
+  name?:string
+  sayName?:Function
+  version?:string
+}
 console.log("装饰器")
 
 console.log("类装饰器")
@@ -17,32 +25,29 @@ function descObjFn(target:new(a:string) => any) {
 function descObjFn1(name:string) {
   let age:number = 30
   return (target:new(a:string) => any) => {
+    // 给类添加属性和方法
     target.prototype.age = age
     target.prototype.name = name
     target.prototype.sayName = () => {
-      console.log(target.name)
+      console.log(target.prototype.name)
     }
   }
 }
 
 @descObjFn
 @descObjFn1("desc")
-class ParentDesc {
+class ParentDesc implements IParentDesc {
   public a:string = "test"
   constructor(a:string) {
     this.a = a
   }
+
 }
-interface ParentDesc {
-  age:number
-  name:string
-  sayName:Function
-  version:string
-}
-let descObj:ParentDesc = new ParentDesc("test")
+
+let descObj:IParentDesc = new ParentDesc("test")
 
 console.log(descObj.age)
-descObj.sayName()
+descObj.sayName && descObj.sayName()
 console.log(descObj.version)
 
 console.log("方法装饰器")

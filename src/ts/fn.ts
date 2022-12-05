@@ -3,7 +3,7 @@
  * @Author: tom-z(spirit108@foxmail.com)
  * @Date: 2022-11-28 22:05:36
  * @LastEditors: tom-z(spirit108@foxmail.com)
- * @LastEditTime: 2022-11-28 22:14:46
+ * @LastEditTime: 2022-11-29 21:18:09
  */
 // 可选参数
 type fn1 = (name: string, age?: number) => string
@@ -24,4 +24,11 @@ const fn4 = (a: number, ...args: number[]): string => {
   return a + "";
 }
 
-fn4(0, 3232, 2, 55)
+fn4(0, 3032, 2, 55)
+
+// function FNC1(a:number, b:number): number
+// function FNC1(a:string, b:string): string;
+
+// const fn5:FNC1 = () => {
+
+// }

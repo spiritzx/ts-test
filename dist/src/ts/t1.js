@@ -1,0 +1,21 @@
+"use strict";
+/*
+ * @Descripttion: 多泛型参数
+ * @Author: tom-z(spirit108@foxmail.com)
+ * @Date: 2022-12-01 21:47:40
+ * @LastEditors: tom-z(spirit108@foxmail.com)
+ * @LastEditTime: 2022-12-03 22:34:44
+ */
+function getArr1(a, b) {
+    console.log(b.length);
+    return [a, ...b];
+}
+function getArr2(a, b) {
+    console.log(b.length);
+    return [a, b.length];
+}
+function getValue(a, b) {
+    return a[b];
+}
+getValue({ a: 1, b: 2 }, "a");
+getValue("", "toString");
